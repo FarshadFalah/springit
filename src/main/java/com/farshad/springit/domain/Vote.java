@@ -1,16 +1,19 @@
 package com.farshad.springit.domain;
 
+import lombok.NonNull;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
-public class Vote {
+public class Vote extends Auditable {
 
     @Id
     @GeneratedValue
     private long id;
+    @NonNull
     private String vote;
 
     public Vote(){}

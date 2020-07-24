@@ -1,18 +1,28 @@
 package com.farshad.springit.domain;
 
+import lombok.NonNull;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
-public class Link {
+public class Link extends Auditable {
 
     @Id
     @GeneratedValue
     private long id;
+    @NonNull
     private String title;
+    @NonNull
     private String url;
+
+    @OneToMany(mappedBy = "link")
+    List<Comment> comments=new ArrayList<>();
 
     public Link(){
         
