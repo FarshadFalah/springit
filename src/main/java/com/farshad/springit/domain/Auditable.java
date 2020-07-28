@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 public class Auditable {
 
     @CreatedBy
-    private String createdBY;
+    private String createdBy;
 
     @CreatedDate
     private LocalDateTime creationDate;
@@ -24,11 +24,11 @@ public class Auditable {
     private String lastModifiedBy;
 
     public String getCreatedBY() {
-        return createdBY;
+        return createdBy;
     }
 
     public void setCreatedBY(String createdBY) {
-        this.createdBY = createdBY;
+        this.createdBy = createdBY;
     }
 
     public LocalDateTime getCreationDate() {
