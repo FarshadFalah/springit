@@ -2,7 +2,6 @@ package com.farshad.springit.controllers;
 
 import com.farshad.springit.domain.Link;
 import com.farshad.springit.repository.LinkRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
